@@ -1,1 +1,3 @@
-console.log(2+2);
+import MobileMenu from "./modules/MobileMenu";
+
+var mobileMenu = new MobileMenu();
