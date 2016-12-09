@@ -6,8 +6,15 @@
 	transition: background-color .4s ease-out;
 
   @mixin atMedium {
+		position: fixed;
 		background-color: rgba($mainGreen, .3);
+
+		&--dark {
+			background-color: rgba(22, 79, 85, .8);
+		}
 	}
+
+
 
 	&--is-expanded {
 		background: rgba($mainGreen, .55);
@@ -24,6 +31,7 @@
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%) scale(.8);
+		transition: transform .3s ease-out;
 		transform-origin: 50% 0%;
 		background-color: $mainGreen;
 		padding: 25px 36px;
@@ -31,6 +39,10 @@
 		@mixin atMedium {
 			left: auto;
 			transform: translateX(0);
+
+			.site-header--dark & {
+				transform: scale(.57);
+			}
 		}
 	}
 
